@@ -1,27 +1,62 @@
 body, html{
   height:100%;
 }
+
 body{
-  margin: 0px;
+  margin: 0px, auto;
   background-color:#444;
   font-size: 18px;
+  text-align: center;
+  background-image: url(http://tonypoolediscos.com/wp-content/uploads/2017/10/The-Shard-Premier-Set-Up-White-Starlight-Booth-White-LED-Dance-FloorLilac-Uplighting.jpg);
+  background-size: cover;
+  background-position: center;
+}
+header {
+  margin: 0px, auto;
+  background-color: #bd1abd;
+  width: 600px;
+  display: inline-block;
+  border-radius: 10px;
+  text-align: center;
 }
 body, a:link, a:visited, a:active{
-  color: lightblue;
+  color: white;
 }
-.title, .addDancerButton{
+.title, .addDancerButton, .lineDanceButton, .flamencoDancer, .discoManButton {
   padding:5px 12px;
-  float:right;
+  font-family: Arial, Helvetica, sans-serif;
 }
 .topbar{
   height:32px;
-  background-color: #555;
+  background-color: rgb(0, 0, 0);
 }
 .title{
-  background-color: #777;
+  text-align: center;
+  font-size: 45px;
+  display: inline-block;
 }
+.buttonList {
+  padding: 12px;
+
+}
+
+button {
+  background-color: white;
+  border-radius: 5px;
+  color: #bd1abd;
+  padding: 15px 32px;
+  text-align: center;
+  font-size: 20px;
+  margin-left: 8px;
+  margin-right: 8px;
+}
+
 .dancer{
-  border:10px solid red;
-  border-radius:10px;
+  /* border:10px solid red;
+  border-radius:10px; */
+  background: url('spongebob-rockstar.png');
+  background-repeat: no-repeat;
+  width: 1200px;
+  height: 400px;
   position:absolute;
 }
