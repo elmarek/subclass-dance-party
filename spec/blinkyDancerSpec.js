@@ -16,7 +16,6 @@ describe('blinkyDancer', function() {
   it('should have a step function that makes its node blink', function() {
     sinon.spy(blinkyDancer.$node, 'toggle');
     blinkyDancer.step();
-console.log(blinkyDancer)
     expect(blinkyDancer.$node.toggle.called).to.be.true;
   });
 
@@ -30,7 +29,6 @@ console.log(blinkyDancer)
       clock.tick(timeBetweenSteps);
 
       expect(blinkyDancer.step.callCount).to.be.equal(1);
-      console.log(blinkyDancer)
       clock.tick(timeBetweenSteps);
       expect(blinkyDancer.step.callCount).to.be.equal(2);
       console.log(blinkyDancer.step.callCount)
