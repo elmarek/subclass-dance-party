@@ -1,5 +1,5 @@
 var FlamencoDancer = function(top, left, timeBetweenSteps) {
-  if (top < 100) {
+  if (top < 150) {
     top += 200;
   } else if (top > 800) {
     top -= 200;
@@ -11,6 +11,7 @@ var FlamencoDancer = function(top, left, timeBetweenSteps) {
   Dancer.call(this, top, left, timeBetweenSteps);
 
   this.$node.addClass("flamenco");
+  this.neighbor = {};
 
 };
 FlamencoDancer.prototype = Object.create(Dancer.prototype);
@@ -32,10 +33,10 @@ FlamencoDancer.prototype.step = function() {
 //leave as toggle, animate in init.js
   //this.$node.toggle();
   this.$node.animate({
-    'left' : '-=30px'
+    'left' : '-=20px'
   });
   this.$node.animate({
-    'left' : '+=30px',
+    'left' : '+=20px',
   })
 
 };

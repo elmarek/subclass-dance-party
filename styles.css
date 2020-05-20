@@ -23,7 +23,7 @@ header {
 body, a:link, a:visited, a:active{
   color: white;
 }
-.title, .addSpongeBobRockStar, .lineDanceButton, .addFlamencoDancer, .addGangnamStyle, .hammerTime {
+.title, .addSpongeBobRockStar, .lineDanceButton, .addFlamencoDancer, .addGangnamStyle, .partners {
   padding:5px 12px;
   font-family: Arial, Helvetica, sans-serif;
 }
@@ -59,7 +59,7 @@ button {
   background: url('spongebob-rockstar.png');
   background-repeat: no-repeat;
   width: 150px;
-  height: 102px;
+  height: 122px;
   position:absolute;
 }
 
@@ -78,10 +78,20 @@ button {
   background: url('Gangnam-style.png');
   background-repeat: no-repeat;
   width: 85px;
-  height: 175px;
+  height: 195px;
   position:absolute;
 }
+.gangnam:hover {
+  transform: rotateY(180deg);
+}
 
+.flamenco:hover {
+  transform: rotateY(180deg);
+}
+
+.spongebob:hover {
+  transform: rotateY(180deg);
+}
 
 
 

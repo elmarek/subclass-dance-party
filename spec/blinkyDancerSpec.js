@@ -1,40 +1,40 @@
-describe('blinkyDancer', function() {
+describe('spongeBobRockStar', function() {
 
-  var blinkyDancer, clock;
+  var spongeBobRockStar, clock;
   var timeBetweenSteps = 100;
 
   beforeEach(function() {
     clock = sinon.useFakeTimers();
-    blinkyDancer = new BlinkyDancer(10, 20, timeBetweenSteps);
+    spongeBobRockStar = new SpongeBobRockStar(10, 20, timeBetweenSteps);
   });
 
   it('should have a jQuery $node object', function() {
-    expect(blinkyDancer.$node).to.be.an.instanceof(jQuery);
+    expect(spongeBobRockStar.$node).to.be.an.instanceof(jQuery);
 
   });
   it('should have a function called lineDance', function() {
-    expect(blinkyDancer.lineDance).to.be.a('function');
+    expect(spongeBobRockStar.lineDance).to.be.a('function');
 
   });
 
   it('should have a step function that makes its node blink', function() {
-    sinon.spy(blinkyDancer.$node, 'toggle');
-    blinkyDancer.step();
-    expect(blinkyDancer.$node.toggle.called).to.be.true;
+    sinon.spy(spongeBobRockStar.$node, 'toggle');
+    spongeBobRockStar.step();
+    expect(spongeBobRockStar.$node.toggle.called).to.be.true;
   });
 
   describe('dance', function() {
     it('should call step at least once per second', function() {
-      sinon.spy(blinkyDancer, 'step');
+      sinon.spy(spongeBobRockStar, 'step');
       //console.log(blinkyDancer)
-      expect(blinkyDancer.step.callCount).to.be.equal(0);
+      expect(spongeBobRockStar.step.callCount).to.be.equal(0);
 
       clock.tick(timeBetweenSteps); // ? it seems an extra tick is necessary...
       clock.tick(timeBetweenSteps);
 
-      expect(blinkyDancer.step.callCount).to.be.equal(1);
+      expect(spongeBobRockStar.step.callCount).to.be.equal(1);
       clock.tick(timeBetweenSteps);
-      expect(blinkyDancer.step.callCount).to.be.equal(2);
+      expect(spongeBobRockStar.step.callCount).to.be.equal(2);
     });
   });
 });

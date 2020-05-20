@@ -9,7 +9,7 @@ $(document).ready(function() {
     var dancerMakerFunction = window[dancerMakerFunctionName];
     // make a dancer with a random position
     var spongebob = new dancerMakerFunction(
-      $("body").height() * Math.random(),
+      $("body").height() * Math.min(.8, Math.random()),
       $("body").width() * Math.random(),
       Math.random () * 1000
     );
@@ -25,7 +25,7 @@ $(document).ready(function() {
     var dancerMakerFunction = window[dancerMakerFunctionName];
     // make a dancer with a random position
     var flamenco = new dancerMakerFunction(
-      $("body").height() * Math.random(),
+      $("body").height() * Math.min(.8, Math.random()),
       $("body").width() * Math.random(),
       Math.random () * 1000
     );
@@ -41,7 +41,7 @@ $(document).ready(function() {
     var dancerMakerFunction = window[dancerMakerFunctionName];
     // make a dancer with a random position
     var gangnam = new dancerMakerFunction(
-      $("body").height() * Math.random(),
+      $("body").height() * Math.min(.8, Math.random()),
       $("body").width() * Math.random(),
       Math.random () * 1000
     );
@@ -58,14 +58,38 @@ $(document).ready(function() {
 
   });
 
-  // $( ".hammerTime" ).on('click', function(event) {
-  //   //debugger;
-  //   $.each(window.dancers, function(index, dancer) {
-
-  //     dancer.fx.off = true;
-  //   });
+  // $( ".freeze" ).on('click', function(event) {
+  //   debugger;
+  //   $('.flamenco').stop();
+  //   $('.gangnam').stop();
+  //   $('.spongebob').stop();
   // });
 
+
+  function assignPartners(dancers) {
+    //iterate through the dancers by 2
+    for (var i = 0; i < dancers.length; i += 2) {
+      if (dancers[i] === undefined || dancers[i + 1] === undefined) {
+        break;
+      }
+
+      var height = $("body").height() * Math.min(.8, Math.random());
+      var width = $("body").width() * Math.random();
+      //change location of i and i + 1
+      console.log(dancers[i])
+      console.log(dancers[i+1])
+      dancers[i].setPosition(height, width);
+      dancers[i + 1].setPosition(height + 20, width + 5)
+      //debugger;
+
+    }
+  }
+
+
+  $( ".partners" ).on('click', function(event) {
+    //debugger;
+     assignPartners(window.dancers)
+  });
 
 });
 

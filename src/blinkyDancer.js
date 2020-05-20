@@ -1,5 +1,5 @@
 var SpongeBobRockStar = function(top, left, timeBetweenSteps) {
-  if (top < 100) {
+  if (top < 150) {
     top += 200;
   }
   if (left > 900) {
@@ -9,6 +9,7 @@ var SpongeBobRockStar = function(top, left, timeBetweenSteps) {
 
   this.$node.addClass("spongebob");
 
+  this.neighbor = {};
 };
 SpongeBobRockStar.prototype = Object.create(Dancer.prototype);
 SpongeBobRockStar.prototype.constructor = SpongeBobRockStar;
