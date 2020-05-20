@@ -33,10 +33,10 @@ FlamencoDancer.prototype.step = function() {
 //leave as toggle, animate in init.js
   //this.$node.toggle();
   this.$node.animate({
-    'left' : '-=20px'
-  });
+    'background-position-x' : '+=20px',
+  })
   this.$node.animate({
-    'left' : '+=20px',
+    'background-position-x' : '-=20px',
   })
 
 };

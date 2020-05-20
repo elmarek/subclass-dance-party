@@ -69,17 +69,15 @@ $(document).ready(function() {
   function assignPartners(dancers) {
     //iterate through the dancers by 2
     for (var i = 0; i < dancers.length; i += 2) {
-      if (dancers[i] === undefined || dancers[i + 1] === undefined) {
+      if (dancers[i + 1] === undefined) {
         break;
       }
 
-      var height = $("body").height() * Math.min(.8, Math.random());
-      var width = $("body").width() * Math.random();
+      var top = $("body").height() * Math.min(.8, Math.random());
+      var left = $("body").width() * Math.random();
       //change location of i and i + 1
-      console.log(dancers[i])
-      console.log(dancers[i+1])
-      dancers[i].setPosition(height, width);
-      dancers[i + 1].setPosition(height + 20, width + 5)
+      dancers[i].setPosition(top, left);
+      dancers[i + 1].setPosition(top + 20, left + 5);
       //debugger;
 
     }
